@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html class='no-js' lang='en'>
+  <head>
+    <title>{title}{block:PostTitle}: {PostTitle}{/block:PostTitle}</title>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <meta name='author' content='Jodi Houlihan' />
+    <link rel='stylesheet.css' media='screen' href='stylesheet.css' />
+    <link rel='shortcut icon' href='{Favicon}' />
+    <link rel='alternate' type='application/rss+xml' href='{RSS}' />
+    {block:Description}
+    <meta name='description' content='{MetaDescription}' />
+    {/block:Description}
+  </head>
+  <body>
+    <div id='page'>
+      <header id='header'>
+        <h1>
+          Jodi Houlihan
+        </h1>
+        <h2>
+          Exciting Things Happening in My World
+        </h2>
+      </header>
+    </div>
+    <div id='content'>
+      {block:Posts}
+      {/block:Text}     
+      My first text post
+      {/block:Text}
+      {block:Quote}
+      <article class='quote'>
+        <header>
+          <h1 class='wayfinder'>Quote</h1>
+        </header>
+        <div class='section'>
+          <div class='main'>
+            {block:Source}
+            <h1 class='source'>What did the Chicago Innovation Chase do for you? {Salima Bouhriz, Villanova University Chase alum}:</h1>
+            {/block:Source} 
+            <blockquote class='quote-{Length)'>
+              '...it brought out skills in me I never thought I had 
+              and pushed me to limits I never thought I was capable of overcoming.'
+            </blockquote>
+            <footer>
+              Posted on December 10, 2014
+            </footer>
+          </div>
+        </div>
+      </article>
+      {/block:Quote}
+      {block:Photo}
+      <article class='photo'>
+        <header>
+          <h1 class='wayfinder'>Photo</h1>
+        </header>
+        <div class='section'>
+          <div class='main'>
+            <div class='image'>
+              <a href='{Permalink}'>
+                <img src='{PhotoURL-HighRes' alt='{PhotoAlt' title='{PhotoAlt' />
+              </a>
+            </div>
+            <div class='caption'>Crain's Small Business Week 2014 Social Media talk at IIT presented by Office of Community Affairs</div>
+          </div>
+        </div>
+        <footer>
+          <a href='{Permalink'>Posted on December 10, 2014</a>
+        </footer>
+      </article>
+      {/block:Photo}
+    </div>
+  </body>
+</html>

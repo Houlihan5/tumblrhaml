@@ -1,0 +1,60 @@
+!!! XML
+!!!
+%html{lang: "en", class: "no-js"}
+  %head
+    %title {title}{block:PostTitle}: {PostTitle}{/block:PostTitle}
+    %meta{charset: "utf-8"}
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1.0"}
+    %meta{name: "author", content: "Jodi Houlihan"}
+    %link{rel: "stylesheet.css", media: "screen", href: "stylesheet.css"}
+    %link{rel: "shortcut icon", href: "{Favicon}"}
+    %link{rel: "alternate", type: "application/rss+xml", href: "{RSS}"}
+    {block:Description}
+    %meta{name: "description", content: "{MetaDescription}"}
+    {/block:Description}
+  %body
+    #page
+      %header{id: "header"}
+        %h1
+          Jodi Houlihan
+        %h2
+          Exciting Things Happening in My World
+    #content
+
+      {block:Posts}
+      {/block:Text}     
+      My first text post
+      {/block:Text}
+
+      {block:Quote}
+      %article.quote
+        %header
+          %h1.wayfinder Quote
+        .section
+          .main
+            {block:Source}
+            %h1.source What did the Chicago Innovation Chase do for you? {Salima Bouhriz, Villanova University Chase alum}:
+            {/block:Source} 
+            %blockquote{class: "quote-{Length)"}
+              '...it brought out skills in me I never thought I had 
+              and pushed me to limits I never thought I was capable of overcoming.'
+            %footer
+              Posted on December 10, 2014
+      {/block:Quote}
+
+      {block:Photo}
+      %article.photo
+        %header
+          %h1.wayfinder Photo
+        .section
+          .main
+            .image
+              %a{href: "{Permalink}"}
+                %img{src: "{PhotoURL-HighRes"}, alt: "{PhotoAlt"}, title: "{PhotoAlt"}}
+            .caption Crain's Small Business Week 2014 Social Media talk at IIT presented by Office of Community Affairs
+        %footer
+          %a{href: "{Permalink"}} Posted on December 10, 2014
+      {/block:Photo}
+
+
+
